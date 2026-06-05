@@ -3,6 +3,10 @@ from flask_cors import CORS
 app = create_app()
 CORS(app)
 
+@app.route('/')
+def home ():
+    return '<h1>This is Home Page</h1>'
+
 if __name__ == "__main__":
     with app.app_context():
         from app.extensions import db
