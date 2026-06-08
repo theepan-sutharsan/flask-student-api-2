@@ -120,3 +120,5 @@ def delete_course(course_id):
     except Exception:
         db.session.rollback()
         return jsonify({"error": "An internal server error occurred."}), 500
+    
+    
